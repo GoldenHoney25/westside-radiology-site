@@ -1,106 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Westside Radiology</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Westside Radiology Imaging LLC</title>
   <style>
+    :root {
+      --navy: #003366;
+      --light: #f4f6f9;
+      --white: #ffffff;
+      --text: #222;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      background-color: #003366;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
     }
-    header {
-      background: #002244;
-      padding: 20px;
+
+    /* Hero / Slide 1 background */
+    .hero {
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      color: var(--white);
+      padding: 40px 20px;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('images/slide1.jpeg') center/cover no-repeat;
     }
-    header h1 {
+    .hero h1 {
+      font-size: 2.6rem;
+      margin: 0 0 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .hero p {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 1.1rem;
+      max-width: 900px;
     }
-    section {
-      padding: 60px 20px;
+
+    /* Mission / Slide 2 background */
+    .mission {
+      padding: 50px 20px;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('images/slide2.jpg') center/cover no-repeat;
+      color: var(--white);
       text-align: center;
     }
-    /* Services section with background slideshow */
-    #services {
-      position: relative;
-      color: white;
-      padding: 100px 20px;
-      background-size: cover;
-      background-position: center;
-      transition: background-image 1s ease-in-out;
-      min-height: 400px;
+    .mission .card {
+      max-width: 960px;
+      margin: auto;
+      background: rgba(255,255,255,0.08);
+      padding: 28px;
+      border-radius: 8px;
     }
-    #services h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
+
+    /* Services / Slide 3 background */
+    .services {
+      padding: 60px 20px;
+      color: var(--white);
+      background: linear-gradient(rgba(0,51,102,0.65), rgba(0,51,102,0.65)),
+        url('images/slide3.jpg') center/cover no-repeat;
     }
-    .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 1;
+    .services .inner {
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 6px;
     }
-    .content {
-      position: relative;
-      z-index: 2;
+
+    /* Generic sections */
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    #contact {
-      background: #002244;
-      padding: 50px 20px;
+    h2 { color: var(--navy); margin-bottom: 10px; }
+    ul { padding-left: 20px; }
+
+    /* Contact */
+    .contact {
+      background: var(--navy);
+      color: var(--white);
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    footer {
+      padding: 12px 20px;
+      text-align: center;
+      background: #efefef;
+      color: #333;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .hero { padding: 30px 15px; }
+      .hero h1 { font-size: 1.8rem; }
+      .mission { padding: 30px 15px; }
+      .services { padding: 35px 15px; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Westside Radiology</h1>
-    <p>Precision • Care • Trust</p>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <div>
+      <h1>Westside Radiology Imaging LLC</h1>
+      <p>Compassionate, accurate diagnostic imaging — MRI, CT, Ultrasound, X-ray.</p>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>At Westside Radiology, we are dedicated to providing state-of-the-art imaging services with compassion, accuracy, and care. Our mission is to support patients and physicians with reliable results in a comfortable environment.</p>
-  </section>
+  <main>
+    <!-- Mission -->
+    <section class="mission" aria-label="mission">
+      <div class="card">
+        <h2 style="color:#fff;margin-top:0">Our Mission</h2>
+        <p style="color:#fff">
+          At Westside Radiology Imaging LLC, our mission is to deliver high-quality, accurate,
+          and timely diagnostic imaging in a compassionate, patient-centered environment.
+          We support clinicians with clear diagnostic reports while ensuring each patient is
+          treated with dignity and care.
+        </p>
+      </div>
+    </section>
 
-  <!-- Services with rotating background images -->
-  <section id="services">
-    <div class="overlay"></div>
-    <div class="content">
-      <h2>Our Services</h2>
-      <p>MRI • CT • Ultrasound • X-ray • Patient Care</p>
-    </div>
-  </section>
+    <!-- Why Choose Us -->
+    <section class="section" aria-label="why-choose-us">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>State-of-the-art imaging technology</li>
+        <li>Board-certified radiologists and licensed technologists</li>
+        <li>Comfort-focused, patient-centered care</li>
+        <li>Fast, reliable diagnostic reporting</li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>123 Main Street, Your City</p>
-    <p>Phone: (123) 456-7890</p>
-    <p>Email: info@westsideradiology.com</p>
-  </section>
+    <!-- Services -->
+    <section class="services" aria-label="services">
+      <div class="inner">
+        <h2 style="color:#fff;margin-top:0">Our Services</h2>
+        <p style="color:#fff;max-width:920px;margin:0 auto 10px">
+          MRI • CT Scans • Ultrasound • Digital X-Ray • Diagnostic Reports
+        </p>
+      </div>
+    </section>
 
-  <script>
-    // Slideshow background images for services
-    const images = [
-      "https://source.unsplash.com/1600x900/?mri",
-      "https://source.unsplash.com/1600x900/?ct-scan",
-      "https://source.unsplash.com/1600x900/?ultrasound",
-      "https://source.unsplash.com/1600x900/?xray",
-      "https://source.unsplash.com/1600x900/?healthcare"
-    ];
-    let current = 0;
-    const services = document.getElementById("services");
+    <!-- Contact -->
+    <section class="section contact" aria-label="contact">
+      <h2>Contact Us</h2>
+      <p>1234 Wilshire Blvd, Suite 500, Los Angeles, CA 90017</p>
+      <p>Phone: (213) 555-7890 &nbsp; | &nbsp;
+         Email: <a href="mailto:info@westsideradiology.com" style="color:#fff">info@westsideradiology.com</a></p>
+    </section>
+  </main>
 
-    function changeBackground() {
-      services.style.backgroundImage = `url(${images[current]})`;
-      current = (current + 1) % images.length;
-    }
+  <footer role="contentinfo">
+    &copy; 2025 Westside Radiology Imaging LLC — All rights reserved.
+  </footer>
 
-    // start slideshow
-    changeBackground();
-    setInterval(changeBackground, 5000);
-  </script>
 </body>
 </html>
