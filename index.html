@@ -1,128 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Westside Radiology Imaging LLC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Westside Radiology Imaging, LLC</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      margin: 0;
       line-height: 1.6;
-      background-color: #ffffff;
+      background-color: #f8faff;
       color: #333;
     }
-
     header {
-      background: linear-gradient(to right, #0d47a1, #1976d2);
+      background: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3') center/cover no-repeat;
       color: white;
-      padding: 60px 20px;
       text-align: center;
+      padding: 80px 20px;
     }
-
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
+      margin: 0;
     }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
     section {
       padding: 40px 20px;
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
     }
-
     h2 {
-      color: #0d47a1;
-      margin-bottom: 15px;
+      color: #004080;
+      margin-bottom: 10px;
     }
-
-    ul {
-      padding-left: 20px;
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
     }
-
-    .mission {
-      background: #f4f6f9;
-      padding: 40px 20px;
+    .service {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
       text-align: center;
-      border-radius: 8px;
+      border-radius: 6px;
     }
-
-    .contact {
-      background: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
     footer {
       text-align: center;
-      padding: 15px;
-      background: #e0e0e0;
-      font-size: 0.9rem;
+      padding: 30px 20px;
+      background: #004080;
+      color: white;
     }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      section {
-        padding: 20px;
-      }
+    footer img {
+      margin-top: 15px;
+      width: 120px;
+      height: auto;
+    }
+    a.qr-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Westside Radiology Imaging LLC</h1>
-    <p>Providing quality diagnostic imaging with compassion and care</p>
+    <h1>Westside Radiology Imaging, LLC</h1>
+    <p>Compassionate, Accurate, Professional Radiology Services</p>
   </header>
 
-  <section class="mission">
+  <section>
     <h2>Our Mission</h2>
     <p>
-      At Westside Radiology Imaging LLC, our mission is to deliver high-quality, accurate,
-      and timely diagnostic imaging services in a compassionate and patient-centered environment.
-      We are dedicated to supporting our patients’ health journeys with care, dignity,
-      and professionalism.
+      At Westside Radiology Imaging, our mission is to deliver compassionate, high-quality imaging
+      services that empower patients and physicians with clarity and confidence. We are committed
+      to safety, accuracy, and care at every step.
     </p>
   </section>
 
   <section>
-    <h2>Why Choose Us?</h2>
+    <h2>Why Choose Us</h2>
     <ul>
+      <li>Board-certified radiologists & licensed technologists</li>
       <li>State-of-the-art imaging technology</li>
-      <li>Board-certified radiologists</li>
-      <li>Compassionate and professional staff</li>
-      <li>Comfortable and welcoming environment</li>
-      <li>Fast and accurate results</li>
+      <li>Comfortable, patient-focused environment</li>
+      <li>Fast turnaround times with accurate results</li>
     </ul>
   </section>
 
   <section>
     <h2>Our Services</h2>
-    <ul>
-      <li>MRI Scans</li>
-      <li>CT Scans</li>
-      <li>Ultrasound</li>
-      <li>X-Ray Imaging</li>
-      <li>Diagnostic Reports</li>
-    </ul>
+    <div class="services">
+      <div class="service">X-Ray Imaging</div>
+      <div class="service">Ultrasound</div>
+      <div class="service">MRI Scans</div>
+      <div class="service">CT Scans</div>
+    </div>
   </section>
 
-  <section class="contact">
+  <section>
     <h2>Contact Us</h2>
-    <p>📍 1234 Health Drive, Your City, State</p>
-    <p>📞 (555) 123-4567</p>
-    <p>📧 info@westsideradiology.com</p>
+    <p>1234 Wilshire Blvd, Suite 200, Los Angeles, CA 90025</p>
+    <p>Phone: (310) 555-1234</p>
+    <p>Email: info@westsideradiology.com</p>
   </section>
 
   <footer>
-    <p>© 2025 Westside Radiology Imaging LLC. All rights reserved.</p>
+    <p>Scan below to view our brochure:</p>
+    <a href="https://example.com/brochure.pdf" class="qr-link" target="_blank">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://example.com/brochure.pdf" alt="QR Code to Brochure">
+    </a>
+    <p>&copy; 2025 Westside Radiology Imaging, LLC</p>
   </footer>
 </body>
 </html>
