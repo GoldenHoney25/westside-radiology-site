@@ -1,12 +1,4 @@
-import zipfile
-
-# Define paths
-zip_path = "/mnt/data/westside_radiology_site_package.zip"
-images_dir = Path("/mnt/data/site_images")
-html_path = "/mnt/data/index.html"
-
-# Save the HTML code into index.html
-html_code = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -175,18 +167,4 @@ html_code = """<!DOCTYPE html>
   </footer>
 
 </body>
-</html>"""
-
-with open(html_path, "w", encoding="utf-8") as f:
-    f.write(html_code)
-
-# Create zip with index.html + images folder
-with zipfile.ZipFile(zip_path, 'w') as zipf:
-    # Add index.html
-    zipf.write(html_path, "index.html")
-    # Add images
-    for img_file in Path(images_dir).glob("*"):
-        arcname = f"images/{img_file.name}"
-        zipf.write(img_file, arcname)
-
-zip_path
+</html>
