@@ -5,71 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Westside Radiology</title>
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       font-family: Arial, sans-serif;
-      color: white;
+      color: #fff;
+      background-color: #003366;
     }
-
-    .background {
-      background: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a8?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-      height: 100%;
+    header {
+      background: #002244;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    /* Services section with background slideshow */
+    #services {
       position: relative;
+      color: white;
+      padding: 100px 20px;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+      min-height: 400px;
     }
-
+    #services h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
     .overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 51, 102, 0.7); /* dark blue overlay */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
     }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    .content {
+      position: relative;
+      z-index: 2;
     }
-
-    p {
-      font-size: 1.2em;
-      max-width: 700px;
-      margin-bottom: 30px;
-    }
-
-    .qr {
-      margin-top: 20px;
-    }
-
-    .qr img {
-      width: 150px;
-      height: 150px;
+    #contact {
+      background: #002244;
+      padding: 50px 20px;
     }
   </style>
 </head>
 <body>
-  <div class="background">
-    <div class="overlay">
-      <h1>Westside Radiology</h1>
-      <p>
-        Providing compassionate, state-of-the-art diagnostic imaging services.  
-        From X-rays to advanced scans, our team is here to support every patient with care and precision.
-      </p>
-      <div class="qr">
-        <p>Scan for more information:</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goldenhoney25.github.io/westside-radiology-site/" alt="QR Code">
-      </div>
+  <header>
+    <h1>Westside Radiology</h1>
+    <p>Precision • Care • Trust</p>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Westside Radiology, we are dedicated to providing state-of-the-art imaging services with compassion, accuracy, and care. Our mission is to support patients and physicians with reliable results in a comfortable environment.</p>
+  </section>
+
+  <!-- Services with rotating background images -->
+  <section id="services">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Our Services</h2>
+      <p>MRI • CT • Ultrasound • X-ray • Patient Care</p>
     </div>
-  </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>123 Main Street, Your City</p>
+    <p>Phone: (123) 456-7890</p>
+    <p>Email: info@westsideradiology.com</p>
+  </section>
+
+  <script>
+    // Slideshow background images for services
+    const images = [
+      "https://source.unsplash.com/1600x900/?mri",
+      "https://source.unsplash.com/1600x900/?ct-scan",
+      "https://source.unsplash.com/1600x900/?ultrasound",
+      "https://source.unsplash.com/1600x900/?xray",
+      "https://source.unsplash.com/1600x900/?healthcare"
+    ];
+    let current = 0;
+    const services = document.getElementById("services");
+
+    function changeBackground() {
+      services.style.backgroundImage = `url(${images[current]})`;
+      current = (current + 1) % images.length;
+    }
+
+    // start slideshow
+    changeBackground();
+    setInterval(changeBackground, 5000);
+  </script>
 </body>
 </html>
