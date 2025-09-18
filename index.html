@@ -1,88 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Westside Radiology Imaging LLC</title>
-  <style>
-    body {margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;}
-    header {
-      position: relative;
-      height: 75vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      background: url('images/building.jpg') no-repeat center center/cover;
-    }
-    header::after {
-      content: "";
-      position: absolute; inset: 0;
-      background: rgba(0,0,0,0.6);
-    }
-    header h1, header p {position: relative; z-index: 1;}
-    header h1 {font-size: 3rem; margin:0;}
-    main {max-width:1100px;margin:auto;padding:20px;}
-    section {margin:40px 0;}
-    h2 {color:#0056b3;text-align:center;margin-bottom:20px;}
-    .about img, .why img {max-width:100%;border-radius:8px;}
-    .services {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-    .service {background:#f9f9f9;padding:20px;border-radius:8px;text-align:center;}
-    .service span {font-size:2rem;display:block;margin-bottom:10px;}
-    .why {display:flex;flex-wrap:wrap;gap:20px;align-items:center;}
-    .why div {flex:1;}
-    footer {background:#0056b3;color:white;text-align:center;padding:20px;}
-    a {color:#0056b3;text-decoration:none;}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Westside Radiology LLC</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div>
-      <h1>Westside Radiology Imaging LLC</h1>
-      <p>Compassionate, accurate diagnostic imaging</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Westside Radiology LLC</h1>
+      <nav class="nav">
+        <a href="#mission">Mission</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#equipment">Equipment</a>
+        <a href="#care">Patient Care</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="about">
-      <h2>About Us</h2>
-      <p>We provide high-quality diagnostic imaging in a safe, comfortable, and patient-focused environment. Our team is dedicated to accuracy, care, and timely results.</p>
-      <img src="images/team.jpg" alt="Radiology team">
-    </section>
-
-    <section class="services">
-      <h2>Our Services</h2>
-      <div class="services">
-        <div class="service"><span>🩻</span><h3>X-Ray</h3><p>Fast and reliable digital imaging.</p></div>
-        <div class="service"><span>🧲</span><h3>MRI</h3><p>Detailed magnetic resonance imaging.</p></div>
-        <div class="service"><span>💻</span><h3>CT Scan</h3><p>High-resolution computed tomography.</p></div>
-        <div class="service"><span>👶</span><h3>Ultrasound</h3><p>Safe and effective imaging for all ages.</p></div>
+    <section id="hero" class="hero">
+      <div class="hero-inner container">
+        <h2>Comprehensive Diagnostic Imaging Services</h2>
+        <p>Accurate results. Compassionate care.</p>
+        <a class="cta" href="#learn">Learn more</a>
       </div>
     </section>
 
-    <section class="why">
-      <div><img src="images/choose-us.jpg" alt="Doctor with patient"></div>
-      <div>
-        <h2>Why Choose Us</h2>
-        <p>✔️ Board-certified radiologists<br>
-           ✔️ State-of-the-art equipment<br>
-           ✔️ Comfortable exam rooms<br>
-           ✔️ Fast, secure reporting</p>
+    <section id="mission" class="section container">
+      <h3>Our Mission</h3>
+      <p class="lead">At Westside Radiology LLC, our mission is to deliver compassionate, accurate, and timely diagnostic imaging services. We are committed to combining state-of-the-art technology with patient-centered care, ensuring that every individual feels supported and respected. By collaborating with healthcare professionals, we strive to provide critical insights that guide effective treatment and improve health outcomes in our community.</p>
+    </section>
+
+    <section id="services" class="section container">
+      <h3>Our Services</h3>
+      <div class="grid services-grid">
+        <div class="service">MRI</div>
+        <div class="service">CT Scans</div>
+        <div class="service">X-Ray</div>
+        <div class="service">Ultrasound</div>
+        <div class="service">Mammography</div>
+        <div class="service">Bone Density Scans</div>
       </div>
     </section>
 
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <p><strong>Address:</strong> 1234 Wilshire Blvd, Suite 500, Los Angeles, CA 90017</p>
-      <p><strong>Phone:</strong> (213) 555-7890</p>
-      <p><strong>Email:</strong> info@westsideradiology.com</p>
-      <p><strong>Hours:</strong> Mon–Fri, 8:00 AM – 6:00 PM</p>
+    <section id="team" class="section container">
+      <h3>Our Team</h3>
+      <ul class="team-list">
+        <li>Radiologists</li>
+        <li>MRI & CT Technicians</li>
+        <li>X-Ray Technicians</li>
+        <li>Ultrasound Technicians</li>
+        <li>Administrative & Support Staff</li>
+      </ul>
+    </section>
+
+    <section id="equipment" class="section container">
+      <h3>Equipment Overview</h3>
+      <p class="muted">Modern imaging equipment and facility layout.</p>
+      <div class="media-row">
+        <img src="https://images.unsplash.com/photo-1586773860416-8a3b8a0e54b9?auto=format&fit=crop&w=1200&q=60" alt="Imaging equipment" />
+      </div>
+    </section>
+
+    <section id="care" class="section container">
+      <h3>Patient-Centered Care</h3>
+      <p>We focus on clear communication, comfort, and timely results for every patient.</p>
+      <div class="media-row">
+        <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1200&q=60" alt="Patient care" />
+      </div>
+    </section>
+
+    <section id="contact" class="section container contact">
+      <h3>Learn More</h3>
+      <p>Scan the QR code on the original presentation to access the full website or press the button below.</p>
+      <a class="button" href="#" id="learn">Visit Full Site</a>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Westside Radiology Imaging LLC. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Westside Radiology LLC</p>
+    </div>
   </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
