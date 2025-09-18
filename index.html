@@ -1,123 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Westside Radiology Imaging LLC</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f5f5f5;
-    }
-
-    header {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .slideshow {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    .slideshow img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      opacity: 0;
-      animation: slideShow 15s infinite;
-    }
-
-    .slideshow img:nth-child(1) {
-      animation-delay: 0s;
-    }
-    .slideshow img:nth-child(2) {
-      animation-delay: 5s;
-    }
-    .slideshow img:nth-child(3) {
-      animation-delay: 10s;
-    }
-
-    @keyframes slideShow {
-      0% { opacity: 0; }
-      10% { opacity: 1; }
-      30% { opacity: 1; }
-      40% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    }
-
-    .hero-text h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-      background: white;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-
-    section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Westside Radiology Imaging LLC</title>
+<style>
+  :root { --navy:#003366; --white:#ffffff; --muted:#f4f6f8; }
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--muted);color:#222}
+  header{position:relative;height:70vh;min-height:360px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .slideshow{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+  .slideshow .visible{opacity:1}
+  .hero-text{position:relative;z-index:2;color:var(--white);text-align:center;padding:20px;text-shadow:0 6px 18px rgba(0,0,0,0.55)}
+  .hero-text h1{margin:0;font-size:2.6rem}
+  main{max-width:1100px;margin:30px auto;padding:0 16px}
+  section{background:#fff;border-radius:8px;padding:34px;margin-bottom:20px;box-shadow:0 4px 14px rgba(0,0,0,0.05)}
+  h2{text-align:center;color:var(--navy);margin-bottom:14px}
+  footer{background:#111;color:#fff;padding:26px;text-align:center;border-top:4px solid #0b3b66}
+</style>
 </head>
 <body>
 
-  <!-- Hero Section with Slideshow -->
-  <header>
-    <div class="slideshow">
-      <img src="hero1.jpg" alt="Building">
-      <img src="hero2.jpg" alt="Doctor with patient">
-      <img src="hero3.jpg" alt="MRI machine">
-    </div>
-    <div class="hero-text">
-      <h1>Westside Radiology Imaging LLC</h1>
-      <p>Compassionate, Accurate Diagnostic Imaging</p>
-    </div>
-  </header>
+<header>
+  <div class="slideshow" id="slideshow"></div>
+  <div class="hero-text">
+    <h1>Westside Radiology Imaging LLC</h1>
+    <p>Compassionate, accurate diagnostic imaging — MRI, CT, Ultrasound, X-ray</p>
+  </div>
+</header>
 
-  <!-- Mission Section -->
+<main>
   <section id="mission">
     <h2>Our Mission</h2>
-    <p>
-      At Westside Radiology Imaging LLC, our mission is to deliver high-quality, 
-      accurate, and timely diagnostic imaging in a compassionate, patient-centered 
-      environment. We support clinicians with clear diagnostic reports while ensuring 
-      each patient is treated with dignity and care.
-    </p>
+    <p>At Westside Radiology Imaging LLC, our mission is to deliver high-quality, accurate, and timely diagnostic imaging in a compassionate, patient-centered environment. We support clinicians with clear diagnostic reports while ensuring each patient is treated with dignity and care.</p>
   </section>
 
-  <!-- Services Section -->
   <section id="services">
     <h2>Our Services</h2>
     <ul>
@@ -126,31 +43,42 @@
       <li>Ultrasound</li>
       <li>Digital X-Ray</li>
       <li>Mammography</li>
-      <li>Bone Density (DEXA) Scans</li>
+      <li>Bone Density (DEXA)</li>
     </ul>
   </section>
 
-  <!-- Team Section -->
   <section id="team">
     <h2>Our Team</h2>
-    <p>
-      Our practice is staffed by:
-      <br>• Board-Certified Radiologists
-      <br>• Licensed Radiologic Technologists
-      <br>• MRI & CT Specialists
-      <br>• Administrative and Support Staff
-    </p>
+    <p>Board-certified radiologists, licensed technologists, MRI/CT specialists, and experienced administrative staff — working together to keep patients comfortable and informed.</p>
   </section>
+</main>
 
-  <!-- Contact Section -->
-  <footer>
-    <h2>Contact Us</h2>
-    <p>
-      1234 Wilshire Blvd, Suite 500, Los Angeles, CA 90017 <br>
-      Phone: (213) 555-7890 | Email: info@westsideradiology.com <br>
-      Hours: Mon–Fri, 8 AM – 6 PM
-    </p>
-  </footer>
+<footer>
+  <strong>Contact Us</strong><br>
+  1234 Wilshire Blvd, Suite 500, Los Angeles, CA 90017<br>
+  Phone: (213) 555-7890 | Email: info@westsideradiology.com
+</footer>
+
+<script>
+(function(){
+  const images = ['images/hero1.jpg','images/hero2.jpg','images/hero3.jpg'];
+  const slideshow = document.getElementById('slideshow');
+  const imgs = images.map(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    slideshow.appendChild(img);
+    return img;
+  });
+  let current = 0;
+  function showNext(){
+    imgs.forEach((el,i)=>el.classList.remove('visible'));
+    imgs[current].classList.add('visible');
+    current = (current+1)%imgs.length;
+  }
+  showNext();
+  setInterval(showNext,5000);
+})();
+</script>
 
 </body>
 </html>
