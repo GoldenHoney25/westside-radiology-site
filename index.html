@@ -7,7 +7,8 @@
   <style>
     body { margin: 0; font-family: Arial, sans-serif; color: #333; }
     header {
-      background: url('https://images.unsplash.com/photo-1588776814546-ec7c5b9eaf28?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      background: url('https://images.unsplash.com/photo-1505842465776-3d90f616310d?auto=format&fit=crop&w=1500&q=80') 
+      no-repeat center center/cover;
       height: 90vh; display: flex; justify-content: center; align-items: center;
       color: white; text-align: center; position: relative;
     }
@@ -24,14 +25,17 @@
     .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
     .service {
       border: 1px solid #ddd; border-radius: 8px; overflow: hidden;
-      text-align: center; background: #f9f9f9;
+      text-align: center; background: #f9f9f9; padding: 20px;
     }
-    .service img { width: 100%; height: 180px; object-fit: cover; }
+    .service img { width: 80px; height: 80px; margin-bottom: 10px; }
     .service h3 { margin: 10px 0; color: #003366; }
 
-    .why { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
-    .why img { flex: 1; min-width: 300px; max-width: 500px; border-radius: 8px; }
-    .why div { flex: 2; }
+    .why, .about-image {
+      display: flex; justify-content: center; margin-top: 20px;
+    }
+    .why img, .about-image img {
+      max-width: 100%; height: auto; border-radius: 8px;
+    }
 
     footer {
       background: #003366; color: white; text-align: center; padding: 20px;
@@ -53,8 +57,8 @@
       At Westside Radiology Imaging, we are committed to providing accurate diagnostic services with compassion and care. 
       Our state-of-the-art imaging facility is designed for patient comfort and clinical excellence.
     </p>
-    <div style="text-align:center; margin-top:20px;">
-      <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=80" alt="Radiology Team" style="max-width:80%; border-radius:8px;">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1200&q=80" alt="Radiology Team">
     </div>
   </section>
 
@@ -62,19 +66,19 @@
     <h2>Our Services</h2>
     <div class="services">
       <div class="service">
-        <img src="https://images.unsplash.com/photo-1624571205141-9acfea3884d9?auto=format&fit=crop&w=800&q=80" alt="X-ray">
+        <img src="https://cdn-icons-png.flaticon.com/512/3004/3004458.png" alt="X-ray icon">
         <h3>X-ray</h3>
       </div>
       <div class="service">
-        <img src="https://images.unsplash.com/photo-1629909613593-f9a81cfb623f?auto=format&fit=crop&w=800&q=80" alt="MRI">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320352.png" alt="MRI icon">
         <h3>MRI</h3>
       </div>
       <div class="service">
-        <img src="https://images.unsplash.com/photo-1581594693700-9a8d0dfc7c57?auto=format&fit=crop&w=800&q=80" alt="CT Scan">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320341.png" alt="CT Scan icon">
         <h3>CT Scan</h3>
       </div>
       <div class="service">
-        <img src="https://images.unsplash.com/photo-1631554608294-cfba07bf92f2?auto=format&fit=crop&w=800&q=80" alt="Ultrasound">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320372.png" alt="Ultrasound icon">
         <h3>Ultrasound</h3>
       </div>
     </div>
@@ -83,16 +87,14 @@
   <section id="why">
     <h2>Why Choose Us</h2>
     <div class="why">
-      <img src="https://images.unsplash.com/photo-1606813902914-5a9cf0f3d234?auto=format&fit=crop&w=1000&q=80" alt="Doctor with patient">
-      <div>
-        <p>
-          • Board-certified radiologists and technologists <br>
-          • Cutting-edge imaging equipment <br>
-          • Patient-focused comfort and care <br>
-          • Fast, reliable results delivered securely <br>
-        </p>
-      </div>
+      <img src="https://images.unsplash.com/photo-1606813902914-5a9cf0f3d234?auto=format&fit=crop&w=1200&q=80" alt="Doctor with patient">
     </div>
+    <p style="text-align:center; max-width:800px; margin:20px auto;">
+      • Board-certified radiologists and technologists <br>
+      • Cutting-edge imaging equipment <br>
+      • Patient-focused comfort and care <br>
+      • Fast, reliable results delivered securely <br>
+    </p>
   </section>
 
   <section id="contact">
