@@ -9,7 +9,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
-  background: #f0f4f9; /* very light blue background overall */
+  background: #f0f4f9;
 }
 
 .container {
@@ -20,12 +20,13 @@ body {
 
 /* Header */
 header {
-  background: #1e3a8a;
+  background: #1e3a8a; /* deep healthcare blue */
   color: #fff;
   padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 header .container {
@@ -37,6 +38,9 @@ header .container {
 header .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 header nav ul {
@@ -67,7 +71,7 @@ header nav a:hover {
   text-align: center;
   color: #fff;
   padding: 0 1rem;
-  clip-path: ellipse(120% 100% at 50% 0%); /* curved bottom shape */
+  clip-path: ellipse(130% 100% at 50% 0%);
 }
 
 .hero-content h2 {
@@ -96,7 +100,7 @@ header nav a:hover {
   color: #fff;
 }
 
-/* Sections */
+/* Section Base */
 .section {
   padding: 4rem 0;
   position: relative;
@@ -118,23 +122,16 @@ header nav a:hover {
 }
 
 /* Alternate Backgrounds */
-#about {
-  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+.bg-light {
+  background: #f9fafb;
 }
 
-#services {
-  background: linear-gradient(135deg, #e0e7ff, #f9fafb);
+.bg-shape {
+  background: linear-gradient(135deg, #e0f2fe, #f9fafb);
+  clip-path: polygon(0 0, 100% 3%, 100% 97%, 0% 100%);
 }
 
-#team {
-  background: linear-gradient(135deg, #f0fdf4, #f9fafb);
-}
-
-#contact {
-  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
-}
-
-/* Services */
+/* Services Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -190,13 +187,24 @@ header nav a:hover {
   margin-right: 0.5rem;
 }
 
-/* Contact Form */
+/* Contact */
+#contact p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+#contact i {
+  color: #2563eb;
+  margin-right: 0.5rem;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   max-width: 600px;
-  margin: auto;
+  margin: 2rem auto 0;
 }
 
 form input,
@@ -216,7 +224,7 @@ footer {
   background: #1e3a8a;
   color: #fff;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   margin-top: 2rem;
-  clip-path: ellipse(120% 100% at 50% 100%); /* curved top shape */
+  clip-path: ellipse(130% 100% at 50% 100%);
 }
