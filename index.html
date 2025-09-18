@@ -5,112 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Westside Radiology Imaging LLC</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
     header {
-      background: url('https://images.unsplash.com/photo-1588776814546-ec7c5b9eaf28?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-      height: 90vh; display: flex; justify-content: center; align-items: center;
-      color: white; text-align: center; position: relative;
+      position: relative;
+      background: url('https://i.ibb.co/Qkr1bDY/building-image-3.jpg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
     }
-    header::after {
-      content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 50, 100, 0.6);
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6); /* Dark overlay */
     }
-    header div { position: relative; z-index: 1; }
-    header h1 { font-size: 3em; margin: 0; }
-    header p { font-size: 1.2em; }
-
-    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 20px; color: #003366; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .service {
-      border: 1px solid #ddd; border-radius: 8px; overflow: hidden;
-      text-align: center; background: #f9f9f9; padding: 20px;
+    header h1 {
+      position: relative;
+      font-size: 3rem;
+      z-index: 1;
     }
-    .service img { width: 80px; height: 80px; margin-bottom: 10px; }
-    .service h3 { margin: 10px 0; color: #003366; }
-
-    .why, .about-image {
-      display: flex; justify-content: center; margin-top: 20px;
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .why img, .about-image img {
-      max-width: 100%; height: auto; border-radius: 8px;
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0056b3;
     }
-
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+    .services div {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    .services span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
     footer {
-      background: #003366; color: white; text-align: center; padding: 20px;
+      background: #0056b3;
+      color: white;
+      text-align: center;
+      padding: 20px;
     }
-    footer a { color: #66ccff; text-decoration: none; }
   </style>
 </head>
 <body>
   <header>
-    <div>
-      <h1>Westside Radiology Imaging LLC</h1>
-      <p>Compassionate, Accurate Diagnostic Imaging in Los Angeles</p>
-    </div>
+    <h1>Westside Radiology Imaging LLC</h1>
   </header>
 
-  <section id="about">
+  <section>
     <h2>About Us</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      At Westside Radiology Imaging, we are committed to providing accurate diagnostic services with compassion and care. 
-      Our state-of-the-art imaging facility is designed for patient comfort and clinical excellence.
-    </p>
-    <div class="about-image">
-      <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1200&q=80" alt="Radiology Team">
-    </div>
+    <p>At Westside Radiology Imaging LLC, we provide state-of-the-art diagnostic imaging services in a safe, comfortable, and patient-centered environment. Our team of experienced professionals is dedicated to delivering accurate and timely results to help guide your care.</p>
   </section>
 
-  <section id="services">
+  <section>
     <h2>Our Services</h2>
     <div class="services">
-      <div class="service">
-        <img src="https://cdn-icons-png.flaticon.com/512/3004/3004458.png" alt="X-ray icon">
-        <h3>X-ray</h3>
+      <div>
+        <span>🩻</span>
+        <h3>X-Ray</h3>
+        <p>Fast and reliable digital imaging.</p>
       </div>
-      <div class="service">
-        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320352.png" alt="MRI icon">
+      <div>
+        <span>🧲</span>
         <h3>MRI</h3>
+        <p>Advanced magnetic resonance imaging for detailed scans.</p>
       </div>
-      <div class="service">
-        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320341.png" alt="CT Scan icon">
+      <div>
+        <span>💻</span>
         <h3>CT Scan</h3>
+        <p>High-resolution computed tomography scans.</p>
       </div>
-      <div class="service">
-        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320372.png" alt="Ultrasound icon">
+      <div>
+        <span>👶</span>
         <h3>Ultrasound</h3>
+        <p>Safe and effective imaging for all ages.</p>
       </div>
     </div>
   </section>
 
-  <section id="why">
+  <section>
     <h2>Why Choose Us</h2>
-    <div class="why">
-           • Board-certified radiologists and technologists <br>
-      • Cutting-edge imaging equipment <br>
-      • Patient-focused comfort and care <br>
-      • Fast, reliable results delivered securely <br>
-    </p>
+    <p>We combine compassionate care with cutting-edge technology. Our priority is your health, comfort, and peace of mind. Patients choose us for our expertise, rapid results, and welcoming environment.</p>
   </section>
 
-  <section id="contact">
+  <section>
     <h2>Contact Us</h2>
-    <p style="text-align:center;">
-      📍 1234 Wilshire Blvd, Los Angeles, CA 90025 <br>
-      ☎️ (310) 555-1234 <br>
-      ✉️ info@westsideradiology.com <br>
-      ⏰ Mon–Fri: 8am – 6pm
-    </p>
-    <div style="text-align:center; margin-top:20px;">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.9287759246393!2d-118.44551668478208!3d34.05223438060857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc7d9f92e5e9%3A0xe6e6d9470a1d1a5b!2sWilshire%20Blvd%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1632993029397!5m2!1sen!2sus"
-        width="80%" height="250" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy">
-      </iframe>
-    </div>
+    <p><strong>Address:</strong> 1234 Wilshire Blvd, Suite 500, Los Angeles, CA 90017</p>
+    <p><strong>Phone:</strong> (213) 555-7890</p>
+    <p><strong>Email:</strong> info@westsideradiology.com</p>
+    <p><strong>Hours:</strong> Mon–Fri, 8:00 AM – 6:00 PM</p>
   </section>
 
   <footer>
-    <p>© 2025 Westside Radiology Imaging LLC | Designed for patient-centered care</p>
+    <p>&copy; 2025 Westside Radiology Imaging LLC. All rights reserved.</p>
   </footer>
 </body>
 </html>
