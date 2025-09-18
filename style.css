@@ -1,5 +1,46 @@
-/* Background for Compassionate Imaging section */
-#hero, .hero-section {
-  background: url("images/building.jpg") no-repeat center center;
-  background-size: cover;
+/* --- START: Compassionate Imaging background (paste at end of style.css) --- */
+
+/* 1) Try common hero selectors and the services section */
+#hero,
+.hero,
+.hero-section,
+.masthead,
+.jumbotron,
+.showcase,
+section#services,
+header.site-header {
+  background-image: url("images/building.jpg") !important; /* <-- path relative to your CSS file */
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-attachment: scroll !important;
+  position: relative !important;
+  color: inherit !important;
 }
+
+/* 2) Remove/disable simple pseudo-element overlays that could hide the image */
+#hero::before,
+.hero::before,
+.hero-section::before,
+.masthead::before,
+.jumbotron::before,
+section#services::before {
+  background: transparent !important;
+  display: none !important;
+  content: none !important;
+}
+
+/* 3) Ensure the section has visible height (adjust min-height to taste) */
+#hero,
+.hero,
+section#services {
+  min-height: 55vh !important;   /* makes the background visible — tweak as needed */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 4) Quick visual test: remove after confirming it works */
+section#services { outline: 4px dashed rgba(0,0,0,0.08) !important; }
+
+/* --- END --- */
