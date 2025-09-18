@@ -8,3 +8,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     }
   });
 });
+
+// Animate icons when they scroll into view
+const icons = document.querySelectorAll('.icon');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+icons.forEach(icon => observer.observe(icon));
