@@ -1,127 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Westside Radiology LLC</title>
-  <link rel="stylesheet" href="style.css"/>
-  <!-- Font Awesome for icons -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <style>
+    /* Custom tweaks */
+    body { font-family: "Segoe UI", sans-serif; }
+    .hero {
+      background: linear-gradient(rgba(30,58,138,0.7), rgba(30,58,138,0.7)),
+                  url("https://source.unsplash.com/1600x900/?hospital,medical") center/cover no-repeat;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3rem; font-weight: bold; }
+    .hero p { font-size: 1.3rem; margin-bottom: 1.5rem; }
+    .card i { color: #1e3a8a; margin-bottom: 1rem; }
+    footer { background: #1e3a8a; color: #fff; padding: 2rem 0; }
+    footer a { color: #fff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1 class="logo"><i class="fas fa-hospital"></i> Westside Radiology</h1>
-      <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="hero">
-    <div class="hero-content">
-      <h2>Compassionate Imaging. Accurate Results.</h2>
-      <p>Your trusted partner in diagnostic radiology.</p>
-      <a href="#contact" class="btn"><i class="fas fa-phone"></i> Contact Us</a>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section bg-shape">
-    <div class="container">
-      <h2>Our Mission</h2>
-      <p>
-        At Westside Radiology LLC, our mission is to deliver compassionate, accurate, and timely diagnostic imaging services. 
-        We combine state-of-the-art technology with patient-centered care, ensuring every individual feels supported and respected. 
-        By collaborating with healthcare professionals, we provide critical insights that guide treatment and improve health outcomes.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section bg-light">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="grid">
-        <div class="card">
-          <i class="fas fa-brain fa-3x icon"></i>
-          <h3>MRI</h3>
-          <p>Advanced imaging to visualize internal structures with precision.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-x-ray fa-3x icon"></i>
-          <h3>CT Scans</h3>
-          <p>Detailed cross-sectional imaging for accurate diagnosis.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-bone fa-3x icon"></i>
-          <h3>X-Ray</h3>
-          <p>Quick and effective imaging to detect injuries and conditions.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-heartbeat fa-3x icon"></i>
-          <h3>Ultrasound</h3>
-          <p>Safe, non-invasive imaging for real-time diagnostics.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-female fa-3x icon"></i>
-          <h3>Mammography</h3>
-          <p>Specialized breast imaging for early detection of abnormalities.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-weight fa-3x icon"></i>
-          <h3>Bone Density</h3>
-          <p>Assess bone health and detect osteoporosis risks.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team -->
-  <section id="team" class="section bg-shape">
-    <div class="container">
-      <h2>Our Team</h2>
-      <p>Meet the professionals who make accurate imaging possible:</p>
-      <ul class="team-list">
-        <li><i class="fas fa-user-md"></i> Radiologists</li>
-        <li><i class="fas fa-laptop-medical"></i> MRI & CT Technicians</li>
-        <li><i class="fas fa-x-ray"></i> X-Ray Technicians</li>
-        <li><i class="fas fa-stethoscope"></i> Ultrasound Technicians</li>
-        <li><i class="fas fa-users"></i> Administrative & Support Staff</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section bg-light">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>We’d love to hear from you. Reach us at:</p>
-      <p><i class="fas fa-map-marker-alt"></i> 1234 Westside Blvd, Suite 100, YourCity, ST 00000</p>
-      <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-      <p><i class="fas fa-envelope"></i> info@westsideradiology.com</p>
-      <form>
-        <input type="text" placeholder="Your Name" required/>
-        <input type="email" placeholder="Your Email" required/>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Westside Radiology LLC | 1234 Westside Blvd, Suite 100, YourCity, ST | (555) 123-4567</p>
-    </div>
-  </footer>
-</body>
-</html>
+  <!-- Navbar -->
+  <nav class="navba
