@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MyCompany</title>
-  <!-- ✅ Make sure style.css is in the same folder as this file -->
+  <title>My Business Website</title>
   <link rel="stylesheet" href="style.css"/>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
   <!-- Header -->
@@ -23,19 +24,68 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="hero">
     <div class="hero-content">
-      <h2>Welcome to MyCompany</h2>
-      <p>Turning ideas into professional solutions.</p>
-      <a href="#services" class="btn">Explore Services</a>
+      <h2>We Build Success</h2>
+      <p>Turning ideas into powerful digital solutions.</p>
+      <a href="#services" class="btn"><i class="fas fa-arrow-right"></i> Explore Services</a>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="section">
     <div class="container">
       <h2>About Us</h2>
       <p>
-        We specialize in delivering innovative, tailored solutions designed to
-        help businesses grow.
+        With experience across industries, we design and deliver solutions that help businesses grow. 
+        Our team blends creativity with technology to achieve impactful results.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section bg-light">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="card">
+          <i class="fas fa-lightbulb fa-3x icon"></i>
+          <h3>Consulting</h3>
+          <p>Strategic insights that align your business with future opportunities.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-laptop-code fa-3x icon"></i>
+          <h3>Web Design</h3>
+          <p>Modern, responsive websites that look great and perform flawlessly.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-headset fa-3x icon"></i>
+          <h3>Support</h3>
+          <p>Dependable support to keep your digital presence running smoothly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required/>
+        <input type="email" placeholder="Your Email" required/>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MyCompany. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
