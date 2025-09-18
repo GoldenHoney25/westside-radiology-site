@@ -1,179 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Westside Radiology Imaging LLC</title>
-  <meta name="description" content="Westside Radiology Imaging LLC — MRI, CT, Ultrasound, X-Ray. Patient-focused diagnostic imaging in Los Angeles."/>
   <style>
-    :root{
-      --navy:#003366;
-      --accent:#0b5fa5;
-      --white:#ffffff;
-      --muted:#f6f8fb;
-      --panel:#ffffff;
-      --shadow: rgba(10,20,30,0.06);
+    body {margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;}
+    header {
+      position: relative;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background: url('images/building.jpg') no-repeat center center/cover;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--muted);color:#222}
-    /* HERO / BUILDING BACKGROUND */
-    header{
-      min-height:72vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      position:relative;
-      overflow:hidden;
-      text-align:center;
+    header::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.6);
     }
-    /* Replace the URL below with 'images/building.jpg' if you upload the file to your repo */
-    header::before{
-      content:"";
-      position:absolute;inset:0;
-      background-image:url('https://i.ibb.co/Qkr1bDY/building-image-3.jpg');
-      background-size:cover;background-position:center;
-      filter:brightness(0.7);
-      z-index:0;
-    }
-    header::after{
-      content:"";
-      position:absolute;inset:0;
-      background:linear-gradient(rgba(0,30,60,0.45), rgba(0,30,60,0.45));
-      z-index:1;
-    }
-    .hero{
-      position:relative;z-index:2;padding:28px 18px;
-      color:var(--white);max-width:1100px;margin:auto;
-    }
-    .hero h1{margin:0;font-size:clamp(28px,5vw,48px);letter-spacing:0.4px}
-    .hero p{margin:12px 0 0;font-size:clamp(14px,1.6vw,18px);opacity:0.95}
-
-    /* LAYOUT */
-    main{max-width:1100px;margin:26px auto;padding:0 16px}
-    section{background:var(--panel);border-radius:10px;padding:26px;margin-bottom:18px;box-shadow:0 6px 20px var(--shadow)}
-    h2{text-align:center;color:var(--navy);margin:0 0 14px}
-
-    /* ABOUT IMAGE */
-    .about-image{display:flex;justify-content:center;margin-top:12px}
-    .about-image img{max-width:100%;height:auto;border-radius:8px;display:block}
-
-    /* SERVICES: grid with inline SVG icons */
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-    .service{background:#fbfdff;border:1px solid #e6eef7;border-radius:10px;padding:18px;text-align:center;min-height:150px;display:flex;flex-direction:column;justify-content:center;align-items:center}
-    .service svg{width:68px;height:68px;margin-bottom:10px;fill:var(--accent)}
-    .service h3{margin:8px 0;color:var(--navy)}
-
-    /* WHY CHOOSE US: image + bullets */
-    .why{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
-    .why .img{flex:1;min-width:280px}
-    .why img{width:100%;height:auto;border-radius:8px;display:block}
-    .why .copy{flex:1;min-width:260px}
-
-    /* CONTACT */
-    .contact-list{line-height:1.7;text-align:center}
-
-    footer{background:var(--navy);color:var(--white);padding:18px;text-align:center;border-top:4px solid rgba(255,255,255,0.06);margin-top:16px}
-    a{color:var(--accent);text-decoration:none}
-    @media (min-width:900px){
-      .hero{padding:48px}
-    }
+    header h1, header p {position: relative; z-index: 1;}
+    header h1 {font-size: 3rem; margin:0;}
+    main {max-width:1100px;margin:auto;padding:20px;}
+    section {margin:40px 0;}
+    h2 {color:#0056b3;text-align:center;margin-bottom:20px;}
+    .about img, .why img {max-width:100%;border-radius:8px;}
+    .services {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+    .service {background:#f9f9f9;padding:20px;border-radius:8px;text-align:center;}
+    .service span {font-size:2rem;display:block;margin-bottom:10px;}
+    .why {display:flex;flex-wrap:wrap;gap:20px;align-items:center;}
+    .why div {flex:1;}
+    footer {background:#0056b3;color:white;text-align:center;padding:20px;}
+    a {color:#0056b3;text-decoration:none;}
   </style>
 </head>
 <body>
-  <header role="banner">
-    <div class="hero" role="region" aria-label="Hero">
+  <header>
+    <div>
       <h1>Westside Radiology Imaging LLC</h1>
-      <p>Compassionate, accurate diagnostic imaging — MRI, CT, Ultrasound, Digital X-Ray</p>
+      <p>Compassionate, accurate diagnostic imaging</p>
     </div>
   </header>
 
-  <main role="main">
-    <section id="about" aria-label="About us">
+  <main>
+    <section class="about">
       <h2>About Us</h2>
-      <p style="text-align:center;max-width:900px;margin:auto">
-        Westside Radiology Imaging LLC provides high-quality diagnostic imaging with a focus on patient comfort, clear communication and timely results. Our team of board-certified radiologists and certified technologists use modern equipment and follow strict safety standards.
-      </p>
-      <div class="about-image" aria-hidden="false">
-        <!-- team image hosted; replace with local path images/team.jpg if you upload -->
-        <img src="https://i.ibb.co/7kBLWpt/team-about-us-image-5.jpg" alt="Radiology team">
-      </div>
+      <p>We provide high-quality diagnostic imaging in a safe, comfortable, and patient-focused environment. Our team is dedicated to accuracy, care, and timely results.</p>
+      <img src="images/team.jpg" alt="Radiology team">
     </section>
 
-    <section id="services" aria-label="Services">
+    <section class="services">
       <h2>Our Services</h2>
       <div class="services">
-        <!-- X-Ray -->
-        <div class="service" role="article" aria-label="X-Ray service">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="6" y="8" width="52" height="48" rx="6" ry="6"></rect>
-            <path d="M18 20h28v4H18zM18 28h28v4H18zM18 36h28v4H18z" fill="#fff" opacity="0.6"></path>
-          </svg>
-          <h3>X-Ray</h3>
-          <p style="margin:6px 0 0">Fast, reliable digital radiography for diagnostics and follow-up.</p>
-        </div>
-
-        <!-- MRI -->
-        <div class="service" role="article" aria-label="MRI service">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="32" cy="32" r="24"></circle>
-            <circle cx="32" cy="32" r="12" fill="#fff" opacity="0.8"></circle>
-          </svg>
-          <h3>MRI</h3>
-          <p style="margin:6px 0 0">High-resolution magnetic resonance imaging for detailed soft-tissue evaluation.</p>
-        </div>
-
-        <!-- CT -->
-        <div class="service" role="article" aria-label="CT Scan service">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="6" y="12" width="52" height="40" rx="6" ry="6"></rect>
-            <circle cx="32" cy="32" r="10" fill="#fff" opacity="0.85"></circle>
-          </svg>
-          <h3>CT Scan</h3>
-          <p style="margin:6px 0 0">Rapid, high-resolution computed tomography for trauma and diagnostic care.</p>
-        </div>
-
-        <!-- Ultrasound -->
-        <div class="service" role="article" aria-label="Ultrasound service">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="12" y="12" width="40" height="40" rx="6" ry="6"></rect>
-            <path d="M22 22c6 6 14 6 20 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"></path>
-          </svg>
-          <h3>Ultrasound</h3>
-          <p style="margin:6px 0 0">Safe, non-invasive ultrasound services for all ages and needs.</p>
-        </div>
+        <div class="service"><span>🩻</span><h3>X-Ray</h3><p>Fast and reliable digital imaging.</p></div>
+        <div class="service"><span>🧲</span><h3>MRI</h3><p>Detailed magnetic resonance imaging.</p></div>
+        <div class="service"><span>💻</span><h3>CT Scan</h3><p>High-resolution computed tomography.</p></div>
+        <div class="service"><span>👶</span><h3>Ultrasound</h3><p>Safe and effective imaging for all ages.</p></div>
       </div>
     </section>
 
-    <section id="why" aria-label="Why choose us">
-      <h2>Why Choose Us</h2>
-      <div class="why" style="max-width:1000px;margin:auto">
-        <div class="img">
-          <!-- doctor-patient image hosted; replace with images/choose-us.jpg if you upload -->
-          <img src="https://i.ibb.co/YWtPBvh/choose-us-image-4.jpg" alt="Doctor with patient">
-        </div>
-        <div class="copy">
-          <p>
-            • Board-certified radiologists & licensed technologists<br>
-            • Latest imaging technology and safety protocols<br>
-            • Comfortable, private exam rooms and friendly staff<br>
-            • Fast, secure electronic reporting to your physician
-          </p>
-        </div>
+    <section class="why">
+      <div><img src="images/choose-us.jpg" alt="Doctor with patient"></div>
+      <div>
+        <h2>Why Choose Us</h2>
+        <p>✔️ Board-certified radiologists<br>
+           ✔️ State-of-the-art equipment<br>
+           ✔️ Comfortable exam rooms<br>
+           ✔️ Fast, secure reporting</p>
       </div>
     </section>
 
-    <section id="contact" aria-label="Contact">
-      <h2>Contact</h2>
-      <p class="contact-list">
-        1234 Wilshire Blvd, Suite 500, Los Angeles, CA 90017<br>
-        Phone: <a href="tel:+12135557890">(213) 555-7890</a> • Email: <a href="mailto:info@westsideradiology.com">info@westsideradiology.com</a><br>
-        Hours: Mon–Fri 8:00 AM – 6:00 PM
-      </p>
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> 1234 Wilshire Blvd, Suite 500, Los Angeles, CA 90017</p>
+      <p><strong>Phone:</strong> (213) 555-7890</p>
+      <p><strong>Email:</strong> info@westsideradiology.com</p>
+      <p><strong>Hours:</strong> Mon–Fri, 8:00 AM – 6:00 PM</p>
     </section>
   </main>
 
   <footer>
-    <small>© 2025 Westside Radiology Imaging LLC — Patient-centered imaging</small>
+    <p>&copy; 2025 Westside Radiology Imaging LLC. All rights reserved.</p>
   </footer>
 </body>
 </html>
