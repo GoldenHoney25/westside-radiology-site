@@ -9,7 +9,7 @@
 .showcase,
 section#services,
 header.site-header {
-  background-image: url("images/building.jpg") !important; /* <-- path relative to your CSS file */
+  background-image: url("images/building-off.jpg") !important; /* <-- path relative to your CSS file */
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
